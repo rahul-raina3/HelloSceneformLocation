@@ -110,6 +110,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
           starbucks.select();
         });
 
+      // onResume to initialze the Session
       arFragment.onResume();
       Frame frame = null;
       try {
@@ -118,6 +119,8 @@ public class HelloSceneformActivity extends AppCompatActivity {
           e.printStackTrace();
       }
       Log.d(TAG, "ARSession [FRAME]: " + frame);
+
+      // Using Custom LocationScene
       locationScene = new LocationSceneCustom(this, this, arFragment);
 
       // Annotation at Buckingham Palace
@@ -127,6 +130,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
                       -84.388684,
                       new AnnotationRenderer("Buckingham Palace")));
 
+      // Calling draw which calls refreshAnchorsIfRequired on the frame
       locationScene.draw(frame);
 
       Log.d(TAG, "ARSession INITIALIZED: " + arFragment.getArSceneView().getSession());

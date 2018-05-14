@@ -144,13 +144,16 @@ public class LocationSceneCustom extends LocationScene {
                     float zRotated = (float)((double)z * Math.cos(rotation) - (double)x * Math.sin(rotation));
                     float xRotated = (float)(-((double)z * Math.sin(rotation) + (double)x * Math.cos(rotation)));
                     float y = frame.getCamera().getDisplayOrientedPose().ty();
+
+                    // THIS IS HOW SCENEFORM ADDS ANCHORS
+                    // ERROR: Not in Tracking State
                     Anchor newAnchor = arFragment.getArSceneView().getSession().createAnchor(frame.getCamera().getPose().compose(Pose.makeTranslation(xRotated, y + (float)heightAdjustment, zRotated)));
                     AnchorNode anchorNode = new AnchorNode(newAnchor);
                     anchorNode.setParent(arFragment.getArSceneView().getScene());
                     Log.d(TAG, "ARSession Anchors [LOCATIONSCENE]: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
 
-                    ((LocationMarker)this.mLocationMarkers.get(i)).anchor = newAnchor;
-                    ((LocationMarker)this.mLocationMarkers.get(i)).renderer.createOnGlThread(mContext, markerDistance);
+//                    ((LocationMarker)this.mLocationMarkers.get(i)).anchor = newAnchor;
+//                    ((LocationMarker)this.mLocationMarkers.get(i)).renderer.createOnGlThread(mContext, markerDistance);
                 } catch (Exception var17) {
                     var17.printStackTrace();
                 }
