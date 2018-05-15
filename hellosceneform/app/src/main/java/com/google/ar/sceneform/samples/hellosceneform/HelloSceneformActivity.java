@@ -17,6 +17,7 @@ package com.google.ar.sceneform.samples.hellosceneform;
 
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
@@ -28,6 +29,7 @@ import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
 import com.google.ar.core.Plane.Type;
 import com.google.ar.core.Session;
+import com.google.ar.core.Trackable;
 import com.google.ar.core.exceptions.CameraNotAvailableException;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.rendering.ModelRenderable;
@@ -46,118 +48,149 @@ import uk.co.appoly.arcorelocation.utils.ARLocationPermissionHelper;
  * This is an example activity that uses the Sceneform UX package to make common AR tasks easier.
  */
 public class HelloSceneformActivity extends AppCompatActivity {
-  private static final String TAG = HelloSceneformActivity.class.getSimpleName();
+    private static final String TAG = HelloSceneformActivity.class.getSimpleName();
 
-  private ArFragment arFragment;
-  private ModelRenderable starbucksRenderable;
-  private LocationSceneCustom locationScene;
-  private Session arSession;
+    private ArFragment arFragment;
+    private ModelRenderable starbucksRenderable;
+    private LocationSceneCustom locationScene;
+    private Session arSession;
+    private Handler mHandler = new Handler();
 
-  @Override
-  @SuppressWarnings({"AndroidApiChecker", "FutureReturnValueIgnored"})
-  // CompletableFuture requires api level 24
-  // FutureReturnValueIgnored is not valid
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+    Runnable locationUpdates = new Runnable() {
+        public void run() {
+            try {
+                Frame frame = arFragment.getArSceneView().getSession().update();
+                Log.d(TAG, "ARSession [FRAME]: " + frame);
 
-    setContentView(R.layout.activity_ux);
+                if (frame.getUpdatedTrackables(Trackable.class).size() == 0) {
+                    locationScene = new LocationSceneCustom(HelloSceneformActivity.this, HelloSceneformActivity.this, arFragment);
 
-    arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
+                    // Annotation at Buckingham Palace
+                    locationScene.mLocationMarkers.add(
+                            new LocationMarker(
+                                    33.780201,
+                                    -84.388684,
+                                    new AnnotationRenderer("Buckingham Palace")));
 
+                    // Calling draw which calls refreshAnchorsIfRequired on the frame
+                    locationScene.draw(frame);
+                    Log.d(TAG, "ARSession INITIALIZED: " + frame);
+                    Log.d(TAG, "ARSession Anchors: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
+//                    HelloSceneformActivity.this.mHandler.postDelayed(HelloSceneformActivity.this.locationUpdates, 1000L);
 
+                }
+            } catch (CameraNotAvailableException e) {
+                e.printStackTrace();
+            }
+        }
+    };
 
-    // When you build a Renderable, Sceneform loads its resources in the background while returning
-    // a CompletableFuture. Call thenAccept(), handle(), or check isDone() before calling get().
-    // Starbucks Renderable
-      ModelRenderable.builder()
-              .setSource(this, R.raw.starbucks)
-              .build()
-              .thenAccept(renderable -> starbucksRenderable = renderable)
-              .exceptionally(
-                      throwable -> {
-                          Toast toast =
-                                  Toast.makeText(this, "Unable to load starbucks renderable", Toast.LENGTH_LONG);
-                          toast.setGravity(Gravity.CENTER, 0, 0);
-                          toast.show();
-                          return null;
-                      });
+    @Override
+    @SuppressWarnings({"AndroidApiChecker", "FutureReturnValueIgnored"})
+    // CompletableFuture requires api level 24
+    // FutureReturnValueIgnored is not valid
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    arFragment.setOnTapArPlaneListener(
-        (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
-          if (starbucksRenderable == null) {
-            return;
-          }
+        setContentView(R.layout.activity_ux);
 
-          if (plane.getType() != Type.HORIZONTAL_UPWARD_FACING) {
-            return;
-          }
-
-          Log.d(TAG, "ARSession: " + arFragment.getArSceneView().getSession());
-
-
-
-            // Create the Anchor.
-          Anchor anchor = hitResult.createAnchor();
-          AnchorNode anchorNode = new AnchorNode(anchor);
-          anchorNode.setParent(arFragment.getArSceneView().getScene());
-          Log.d(TAG, "ARSession Anchors: " + arSession.getAllAnchors().size());
+        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
 
 
-            // Create the transformable andy and add it to the anchor.
-          TransformableNode starbucks = new TransformableNode(arFragment.getTransformationSystem());
-          starbucks.setParent(anchorNode);
-          starbucks.setRenderable(starbucksRenderable);
-          starbucks.select();
-        });
 
-      // onResume to initialze the Session
-      arFragment.onResume();
-      Frame frame = null;
-      try {
-          frame = arFragment.getArSceneView().getSession().update();
-      } catch (CameraNotAvailableException e) {
-          e.printStackTrace();
-      }
-      Log.d(TAG, "ARSession [FRAME]: " + frame);
+        // When you build a Renderable, Sceneform loads its resources in the background while returning
+        // a CompletableFuture. Call thenAccept(), handle(), or check isDone() before calling get().
+        // Starbucks Renderable
+        ModelRenderable.builder()
+                .setSource(this, R.raw.starbucks)
+                .build()
+                .thenAccept(renderable -> starbucksRenderable = renderable)
+                .exceptionally(
+                        throwable -> {
+                            Toast toast =
+                                    Toast.makeText(this, "Unable to load starbucks renderable", Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
+                            toast.show();
+                            return null;
+                        });
 
-      // Using Custom LocationScene
-      locationScene = new LocationSceneCustom(this, this, arFragment);
+        arFragment.setOnTapArPlaneListener(
+                (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
+                    if (starbucksRenderable == null) {
+                        return;
+                    }
 
-      // Annotation at Buckingham Palace
-      locationScene.mLocationMarkers.add(
-              new LocationMarker(
-                      33.780201,
-                      -84.388684,
-                      new AnnotationRenderer("Buckingham Palace")));
+                    if (plane.getType() != Type.HORIZONTAL_UPWARD_FACING) {
+                        return;
+                    }
 
-      // Calling draw which calls refreshAnchorsIfRequired on the frame
-      locationScene.draw(frame);
+                    Log.d(TAG, "ARSession: " + arFragment.getArSceneView().getSession());
 
-      Log.d(TAG, "ARSession INITIALIZED: " + arFragment.getArSceneView().getSession());
-      Log.d(TAG, "ARSession Anchors: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
 
-  }
 
-  @Override
+                    // Create the Anchor.
+                    Anchor anchor = hitResult.createAnchor();
+                    AnchorNode anchorNode = new AnchorNode(anchor);
+                    anchorNode.setParent(arFragment.getArSceneView().getScene());
+                    Log.d(TAG, "ARSession Anchors: " + arSession.getAllAnchors().size());
+
+
+                    // Create the transformable andy and add it to the anchor.
+                    TransformableNode starbucks = new TransformableNode(arFragment.getTransformationSystem());
+                    starbucks.setParent(anchorNode);
+                    starbucks.setRenderable(starbucksRenderable);
+                    starbucks.select();
+                });
+
+        // onResume to initialze the Session
+        arFragment.onResume();
+        Frame frame = null;
+        try {
+            frame = arFragment.getArSceneView().getSession().update();
+        } catch (CameraNotAvailableException e) {
+            e.printStackTrace();
+        }
+
+        this.locationUpdates.run();
+//      Log.d(TAG, "ARSession [FRAME]: " + frame);
+//      // Using Custom LocationScene
+//      locationScene = new LocationSceneCustom(this, this, arFragment);
+//
+//      // Annotation at Buckingham Palace
+//      locationScene.mLocationMarkers.add(
+//              new LocationMarker(
+//                      33.780201,
+//                      -84.388684,
+//                      new AnnotationRenderer("Buckingham Palace")));
+
+        // Calling draw which calls refreshAnchorsIfRequired on the frame
+//      locationScene.draw(frame);
+
+//      Log.d(TAG, "ARSession INITIALIZED: " + arFragment.getArSceneView().getSession());
+//      Log.d(TAG, "ARSession Anchors: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
+
+    }
+
+    @Override
     protected void onResume() {
-      super.onResume();
-      if (ARLocationPermissionHelper.hasPermission(this)) {
+        super.onResume();
+        if (ARLocationPermissionHelper.hasPermission(this)) {
 
-          if (locationScene != null) {
-              locationScene.resume();
-          }
-      } else {
-          ARLocationPermissionHelper.requestPermission(this);
-      }
-  }
+            if (locationScene != null) {
+                locationScene.resume();
+            }
+        } else {
+            ARLocationPermissionHelper.requestPermission(this);
+        }
+    }
 
-  @Override
+    @Override
     public void onPause() {
-      super.onPause();
-      if (locationScene != null) {
-          locationScene.pause();
-      }
-  }
+        super.onPause();
+        if (locationScene != null) {
+            locationScene.pause();
+        }
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] results) {
