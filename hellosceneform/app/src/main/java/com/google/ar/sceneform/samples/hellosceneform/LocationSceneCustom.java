@@ -2,6 +2,7 @@ package com.google.ar.sceneform.samples.hellosceneform;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.ColorSpace;
 import android.os.Handler;
 import android.util.Log;
 
@@ -11,7 +12,9 @@ import com.google.ar.core.Pose;
 import com.google.ar.core.Session;
 import com.google.ar.core.TrackingState;
 import com.google.ar.sceneform.AnchorNode;
+import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
+import com.google.ar.sceneform.ux.TransformableNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -43,11 +46,13 @@ public class LocationSceneCustom extends LocationScene {
     };
     private Session mSession;
     private ArFragment arFragment;
+    private ModelRenderable starbucksRenderable;
 
-    public LocationSceneCustom(Context mContext, Activity mActivity, ArFragment arFragment) {
+    public LocationSceneCustom(Context mContext, Activity mActivity, ArFragment arFragment, ModelRenderable starbucksRenderable) {
         super(mContext, mActivity, arFragment.getArSceneView().getSession());
 
         this.arFragment = arFragment;
+        this.starbucksRenderable = starbucksRenderable;
         this.startCalculationTask();
         this.deviceLocation = new DeviceLocation();
         this.deviceOrientation = new DeviceOrientation();
@@ -151,8 +156,19 @@ public class LocationSceneCustom extends LocationScene {
                     AnchorNode anchorNode = new AnchorNode(newAnchor);
                     anchorNode.setParent(arFragment.getArSceneView().getScene());
                     Log.d(TAG, "ARSession Anchors [LOCATIONSCENE]: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
+                    ((LocationMarkerCustom)this.mLocationMarkers.get(i)).anchor = newAnchor;
+                    ((LocationMarkerCustom)this.mLocationMarkers.get(i)).anchorNode = anchorNode;
 
-//                    ((LocationMarker)this.mLocationMarkers.get(i)).anchor = newAnchor;
+                    ((LocationMarkerCustom)this.mLocationMarkers.get(i)).transformableNode = new TransformableNode(arFragment.getTransformationSystem());
+                    ((LocationMarkerCustom)this.mLocationMarkers.get(i)).transformableNode.setParent(((LocationMarkerCustom)this.mLocationMarkers.get(i)).anchorNode);
+                    ((LocationMarkerCustom)this.mLocationMarkers.get(i)).transformableNode.setRenderable(starbucksRenderable);
+                    ((LocationMarkerCustom)this.mLocationMarkers.get(i)).transformableNode.select();
+
+//                    TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
+//                    andy.setParent(((LocationMarkerCustom)this.mLocationMarkers.get(i)).anchorNode);
+//                    andy.setRenderable(starbucksRenderable);
+//                    andy.select();
+
 //                    ((LocationMarker)this.mLocationMarkers.get(i)).renderer.createOnGlThread(mContext, markerDistance);
                 } catch (Exception var17) {
                     var17.printStackTrace();

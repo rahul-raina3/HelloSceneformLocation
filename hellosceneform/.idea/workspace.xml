@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ARSes" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ARSession" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -27,14 +27,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelloSceneformActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HelloSceneformActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/HelloSceneformActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="48" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="90" column="62" lean-forward="false" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="62" />
               <folding>
-                <element signature="e#3631#3699#0" expanded="true" />
+                <element signature="e#4477#4545#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="starbucks.sfa" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/sampledata/starbucks.sfa">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-288">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,14 +52,220 @@
       <file leaf-file-name="LocationSceneCustom.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationSceneCustom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="148" column="51" lean-forward="false" selection-start-line="148" selection-start-column="51" selection-end-line="148" selection-end-column="51" />
+            <state relative-caret-position="409">
+              <caret line="153" column="51" lean-forward="false" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LocationMarker.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ARCore-Location-0.2.1.aar/772f7266d5fb53c09f2c78e5858c4a13/jars/classes.jar!/uk/co/appoly/arcorelocation/LocationMarker.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="38" column="5" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <marker date="1526326426230" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526326426230" expanded="false" signature="151:232" ph="..." />
+                <marker date="1526326426230" expanded="true" signature="522:633" ph="{...}" />
+                <marker date="1526326426230" expanded="false" signature="690:701" ph=" { " />
+                <marker date="1526326426230" expanded="false" signature="730:736" ph=" }" />
+                <marker date="1526326426230" expanded="false" signature="773:784" ph=" { " />
+                <marker date="1526326426230" expanded="false" signature="807:813" ph=" }" />
+                <marker date="1526326426230" expanded="false" signature="848:859" ph=" { " />
+                <marker date="1526326426230" expanded="false" signature="885:891" ph=" }" />
+                <marker date="1526326426230" expanded="false" signature="944:955" ph=" { " />
+                <marker date="1526326426230" expanded="false" signature="990:996" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocationMarkerCustom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationMarkerCustom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArFragment.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.0.0.aar/82ab11c783f20a6435caac4aa1c73c6f/jars/classes.jar!/com/google/ar/sceneform/ux/ArFragment.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <marker date="1526323832665" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526323832665" expanded="false" signature="150:615" ph="..." />
+                <marker date="1526323832665" expanded="true" signature="751:758" ph="{}" />
+                <marker date="1526323832665" expanded="false" signature="793:804" ph=" { " />
+                <marker date="1526323832665" expanded="false" signature="816:822" ph=" }" />
+                <marker date="1526323832665" expanded="false" signature="870:881" ph=" { " />
+                <marker date="1526323832665" expanded="false" signature="902:908" ph=" }" />
+                <marker date="1526323832665" expanded="true" signature="991:1904" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="1967:1978" ph=" { " />
+                <marker date="1526323832665" expanded="true" signature="2005:2011" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseArFragment.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.0.0.aar/82ab11c783f20a6435caac4aa1c73c6f/jars/classes.jar!/com/google/ar/sceneform/ux/BaseArFragment.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="184" column="34" lean-forward="false" selection-start-line="184" selection-start-column="17" selection-end-line="184" selection-end-column="34" />
+              <folding>
+                <marker date="1526323832665" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526323832665" expanded="false" signature="150:2041" ph="..." />
+                <marker date="1526323832665" expanded="true" signature="2811:2818" ph="{}" />
+                <marker date="1526323832665" expanded="false" signature="2859:2870" ph=" { " />
+                <marker date="1526323832665" expanded="false" signature="2894:2900" ph=" }" />
+                <marker date="1526323832665" expanded="true" signature="2968:3021" ph="{...}" />
+                <marker date="1526323832665" expanded="false" signature="3080:3091" ph=" { " />
+                <marker date="1526323832665" expanded="false" signature="3124:3130" ph=" }" />
+                <marker date="1526323832665" expanded="true" signature="3240:3305" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="3429:5625" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="4320:4506" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="4537:4762" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="4869:5160" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="4931:5039" ph="{...}" />
+                <marker date="1526323832665" expanded="false" signature="5093:5116" ph=" { " />
+                <marker date="1526323832665" expanded="false" signature="5128:5146" ph=" }" />
+                <marker date="1526323832665" expanded="true" signature="5502:5570" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="5779:6427" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="6526:7872" ph="{...}" />
+                <marker date="1526323832665" expanded="false" signature="6898:6994" ph="onClick(dialog, which) → {" />
+                <marker date="1526323832665" expanded="false" signature="7438:7457" ph="}" />
+                <marker date="1526323832665" expanded="false" signature="7549:7636" ph="onDismiss(arg0) → {" />
+                <marker date="1526323832665" expanded="false" signature="7828:7847" ph="}" />
+                <marker date="1526323832665" expanded="true" signature="7932:7991" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="8086:8171" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="8200:8380" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="8427:9901" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="10111:10354" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="10382:10435" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="10465:10556" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="10640:10857" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="10905:11336" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="11363:11855" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="11881:12052" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="12150:12249" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="12305:13204" ph="{...}" />
+                <marker date="1526323832665" expanded="true" signature="13248:13326" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Frame.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/e3901b1f1b10dde15c77406abf7f73c9/jars/classes.jar!/com/google/ar/core/Frame.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="931">
+              <caret line="110" column="53" lean-forward="false" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
+              <folding>
+                <marker date="1526323832902" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526323832902" expanded="false" signature="142:397" ph="..." />
+                <marker date="1526323832902" expanded="true" signature="745:901" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="925:1028" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1077:1211" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1242:1253" ph=" { " />
+                <marker date="1526323832902" expanded="true" signature="1291:1297" ph=" }" />
+                <marker date="1526323832902" expanded="true" signature="1346:1452" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1531:1833" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1866:1959" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="2005:2163" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="2241:2401" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="2445:2599" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="2660:3190" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="3245:3307" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="3359:3508" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="3593:3963" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="4035:4173" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Camera.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/e3901b1f1b10dde15c77406abf7f73c9/jars/classes.jar!/com/google/ar/core/Camera.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-472">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding>
+                <marker date="1526323832902" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526323832902" expanded="true" signature="300:423" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="448:516" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="557:784" ph="{...}" />
+                <marker date="1526323832902" expanded="false" signature="811:822" ph=" { " />
+                <marker date="1526323832902" expanded="false" signature="872:878" ph=" }" />
+                <marker date="1526323832902" expanded="true" signature="927:1062" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1108:1230" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1258:1346" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1389:1489" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1545:1644" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="1730:1847" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Session.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/e3901b1f1b10dde15c77406abf7f73c9/jars/classes.jar!/com/google/ar/core/Session.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="192" column="40" lean-forward="false" selection-start-line="192" selection-start-column="40" selection-end-line="192" selection-end-column="40" />
+              <folding>
+                <marker date="1526323832902" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526323832902" expanded="false" signature="142:1819" ph="..." />
+                <marker date="1526323832902" expanded="true" signature="4090:4299" ph="{...}" />
+                <marker date="1526323832902" expanded="false" signature="4323:4334" ph=" { " />
+                <marker date="1526323832902" expanded="false" signature="4359:4365" ph=" }" />
+                <marker date="1526323832902" expanded="true" signature="4391:4459" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="4508:4644" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="4687:5115" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="5156:5231" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="5293:5346" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="5409:5641" ph="{...}" />
+                <marker date="1526323832902" expanded="false" signature="5666:5677" ph=" { " />
+                <marker date="1526323832902" expanded="false" signature="5713:5719" ph=" }" />
+                <marker date="1526323832902" expanded="true" signature="5768:5841" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="5908:5991" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="5997:6015" ph="/**...*/" />
+                <marker date="1526323832902" expanded="true" signature="6076:6160" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="6208:6318" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="6399:6722" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="6766:6882" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="6931:7063" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="7115:7237" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="7308:7622" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="7728:8155" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="8221:8538" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="8712:12150" ph="{...}" />
+                <marker date="1526323832902" expanded="true" signature="12207:12350" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ARSess</find>
+      <find>ARSession [FRAME]</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -2165,8 +2381,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationSceneCustom.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationMakrkerCustom.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationMarkerCustom.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/HelloSceneformActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationSceneCustom.java" />
       </list>
     </option>
   </component>
@@ -2203,6 +2421,11 @@
             <path>
               <item name="hellosceneform" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="sampledata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hellosceneform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -2210,6 +2433,17 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="hellosceneform" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hellosceneform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="hellosceneform" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="raw" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -2413,7 +2647,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Viewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2451,7 +2685,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3631#3699#0" expanded="true" />
+            <element signature="e#4477#4545#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2464,21 +2698,301 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/70f4f906ef3582244f30789e07dfd397/jars/classes.jar!/com/google/ar/sceneform/ArSceneView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+          <folding>
+            <marker date="1526323832668" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832668" expanded="false" signature="147:890" ph="..." />
+            <marker date="1526323832668" expanded="false" signature="1481:1492" ph=" { " />
+            <marker date="1526323832668" expanded="false" signature="1504:1510" ph=" }" />
+            <marker date="1526323832668" expanded="false" signature="1567:1578" ph=" { " />
+            <marker date="1526323832668" expanded="false" signature="1596:1602" ph=" }" />
+            <marker date="1526323832668" expanded="true" signature="1647:2232" ph="{...}" />
+            <marker date="1526323832668" expanded="true" signature="2294:2477" ph="{...}" />
+            <marker date="1526323832668" expanded="true" signature="2503:2677" ph="{...}" />
+            <marker date="1526323832668" expanded="true" signature="2735:2941" ph="{...}" />
+            <marker date="1526323832668" expanded="false" signature="2988:2999" ph=" { " />
+            <marker date="1526323832668" expanded="false" signature="3034:3040" ph=" }" />
+            <marker date="1526323832668" expanded="true" signature="3073:3084" ph=" { " />
+            <marker date="1526323832668" expanded="true" signature="3104:3110" ph=" }" />
+            <marker date="1526323832668" expanded="false" signature="3141:3152" ph=" { " />
+            <marker date="1526323832668" expanded="false" signature="3177:3183" ph=" }" />
+            <marker date="1526323832668" expanded="true" signature="3229:3330" ph="{...}" />
+            <marker date="1526323832668" expanded="true" signature="3369:4590" ph="{...}" />
+            <marker date="1526323832668" expanded="true" signature="4622:4792" ph="{...}" />
+            <marker date="1526323832668" expanded="true" signature="4843:5320" ph="{...}" />
+            <marker date="1526323832668" expanded="true" signature="5358:5767" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.0.0.aar/82ab11c783f20a6435caac4aa1c73c6f/jars/classes.jar!/com/google/ar/sceneform/ux/PlaneDiscoveryController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <marker date="1526323832665" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832665" expanded="false" signature="150:212" ph="..." />
+            <marker date="1526323832665" expanded="true" signature="377:438" ph="{...}" />
+            <marker date="1526323832665" expanded="false" signature="485:496" ph=" { " />
+            <marker date="1526323832665" expanded="false" signature="527:533" ph=" }" />
+            <marker date="1526323832665" expanded="true" signature="558:676" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="701:819" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/ar/sceneform/ux/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="1003" column="32" lean-forward="false" selection-start-line="1003" selection-start-column="32" selection-end-line="1003" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/e3901b1f1b10dde15c77406abf7f73c9/jars/classes.jar!/com/google/ar/core/Config.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <marker date="1526323832902" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832902" expanded="true" signature="779:876" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="901:969" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1034:1175" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1249:1362" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1421:1556" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1624:1734" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1781:1904" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1960:2064" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2130:2239" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2296:2429" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2502:2620" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2684:2871" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2920:3049" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="3996:4707" ph="{...}" />
+            <marker date="1526323832902" expanded="false" signature="4112:4127" ph=" { " />
+            <marker date="1526323832902" expanded="false" signature="4150:4160" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="4220:4701" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="4743:5439" ph="{...}" />
+            <marker date="1526323832902" expanded="false" signature="4866:4881" ph=" { " />
+            <marker date="1526323832902" expanded="false" signature="4904:4914" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="4969:5433" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="5481:6255" ph="{...}" />
+            <marker date="1526323832902" expanded="false" signature="5658:5673" ph=" { " />
+            <marker date="1526323832902" expanded="false" signature="5696:5706" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="5767:6249" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="6300:7039" ph="{...}" />
+            <marker date="1526323832902" expanded="false" signature="6430:6445" ph=" { " />
+            <marker date="1526323832902" expanded="false" signature="6468:6478" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="6542:7033" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/e3901b1f1b10dde15c77406abf7f73c9/jars/classes.jar!/com/google/ar/core/Camera.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-472">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <marker date="1526323832902" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832902" expanded="true" signature="300:423" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="448:516" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="557:784" ph="{...}" />
+            <marker date="1526323832902" expanded="false" signature="811:822" ph=" { " />
+            <marker date="1526323832902" expanded="false" signature="872:878" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="927:1062" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1108:1230" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1258:1346" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1389:1489" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1545:1644" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1730:1847" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.0.0.aar/82ab11c783f20a6435caac4aa1c73c6f/jars/classes.jar!/com/google/ar/sceneform/ux/BaseArFragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="184" column="34" lean-forward="false" selection-start-line="184" selection-start-column="17" selection-end-line="184" selection-end-column="34" />
+          <folding>
+            <marker date="1526323832665" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832665" expanded="false" signature="150:2041" ph="..." />
+            <marker date="1526323832665" expanded="true" signature="2811:2818" ph="{}" />
+            <marker date="1526323832665" expanded="false" signature="2859:2870" ph=" { " />
+            <marker date="1526323832665" expanded="false" signature="2894:2900" ph=" }" />
+            <marker date="1526323832665" expanded="true" signature="2968:3021" ph="{...}" />
+            <marker date="1526323832665" expanded="false" signature="3080:3091" ph=" { " />
+            <marker date="1526323832665" expanded="false" signature="3124:3130" ph=" }" />
+            <marker date="1526323832665" expanded="true" signature="3240:3305" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="3429:5625" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="4320:4506" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="4537:4762" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="4869:5160" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="4931:5039" ph="{...}" />
+            <marker date="1526323832665" expanded="false" signature="5093:5116" ph=" { " />
+            <marker date="1526323832665" expanded="false" signature="5128:5146" ph=" }" />
+            <marker date="1526323832665" expanded="true" signature="5502:5570" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="5779:6427" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="6526:7872" ph="{...}" />
+            <marker date="1526323832665" expanded="false" signature="6898:6994" ph="onClick(dialog, which) → {" />
+            <marker date="1526323832665" expanded="false" signature="7438:7457" ph="}" />
+            <marker date="1526323832665" expanded="false" signature="7549:7636" ph="onDismiss(arg0) → {" />
+            <marker date="1526323832665" expanded="false" signature="7828:7847" ph="}" />
+            <marker date="1526323832665" expanded="true" signature="7932:7991" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="8086:8171" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="8200:8380" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="8427:9901" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="10111:10354" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="10382:10435" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="10465:10556" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="10640:10857" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="10905:11336" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="11363:11855" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="11881:12052" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="12150:12249" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="12305:13204" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="13248:13326" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.0.0.aar/82ab11c783f20a6435caac4aa1c73c6f/jars/classes.jar!/com/google/ar/sceneform/ux/ArFragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1526323832665" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832665" expanded="false" signature="150:615" ph="..." />
+            <marker date="1526323832665" expanded="true" signature="751:758" ph="{}" />
+            <marker date="1526323832665" expanded="false" signature="793:804" ph=" { " />
+            <marker date="1526323832665" expanded="false" signature="816:822" ph=" }" />
+            <marker date="1526323832665" expanded="false" signature="870:881" ph=" { " />
+            <marker date="1526323832665" expanded="false" signature="902:908" ph=" }" />
+            <marker date="1526323832665" expanded="true" signature="991:1904" ph="{...}" />
+            <marker date="1526323832665" expanded="true" signature="1967:1978" ph=" { " />
+            <marker date="1526323832665" expanded="true" signature="2005:2011" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/e3901b1f1b10dde15c77406abf7f73c9/jars/classes.jar!/com/google/ar/core/Session.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="192" column="40" lean-forward="false" selection-start-line="192" selection-start-column="40" selection-end-line="192" selection-end-column="40" />
+          <folding>
+            <marker date="1526323832902" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832902" expanded="false" signature="142:1819" ph="..." />
+            <marker date="1526323832902" expanded="true" signature="4090:4299" ph="{...}" />
+            <marker date="1526323832902" expanded="false" signature="4323:4334" ph=" { " />
+            <marker date="1526323832902" expanded="false" signature="4359:4365" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="4391:4459" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="4508:4644" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="4687:5115" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="5156:5231" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="5293:5346" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="5409:5641" ph="{...}" />
+            <marker date="1526323832902" expanded="false" signature="5666:5677" ph=" { " />
+            <marker date="1526323832902" expanded="false" signature="5713:5719" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="5768:5841" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="5908:5991" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="5997:6015" ph="/**...*/" />
+            <marker date="1526323832902" expanded="true" signature="6076:6160" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="6208:6318" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="6399:6722" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="6766:6882" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="6931:7063" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="7115:7237" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="7308:7622" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="7728:8155" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="8221:8538" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="8712:12150" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="12207:12350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/e3901b1f1b10dde15c77406abf7f73c9/jars/classes.jar!/com/google/ar/core/Frame.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="110" column="53" lean-forward="false" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
+          <folding>
+            <marker date="1526323832902" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526323832902" expanded="false" signature="142:397" ph="..." />
+            <marker date="1526323832902" expanded="true" signature="745:901" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="925:1028" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1077:1211" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1242:1253" ph=" { " />
+            <marker date="1526323832902" expanded="true" signature="1291:1297" ph=" }" />
+            <marker date="1526323832902" expanded="true" signature="1346:1452" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1531:1833" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="1866:1959" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2005:2163" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2241:2401" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2445:2599" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="2660:3190" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="3245:3307" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="3359:3508" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="3593:3963" ph="{...}" />
+            <marker date="1526323832902" expanded="true" signature="4035:4173" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ARCore-Location-0.2.1.aar/772f7266d5fb53c09f2c78e5858c4a13/jars/classes.jar!/uk/co/appoly/arcorelocation/LocationMarker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <marker date="1526326426230" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526326426230" expanded="false" signature="151:232" ph="..." />
+            <marker date="1526326426230" expanded="true" signature="522:633" ph="{...}" />
+            <marker date="1526326426230" expanded="false" signature="690:701" ph=" { " />
+            <marker date="1526326426230" expanded="false" signature="730:736" ph=" }" />
+            <marker date="1526326426230" expanded="false" signature="773:784" ph=" { " />
+            <marker date="1526326426230" expanded="false" signature="807:813" ph=" }" />
+            <marker date="1526326426230" expanded="false" signature="848:859" ph=" { " />
+            <marker date="1526326426230" expanded="false" signature="885:891" ph=" }" />
+            <marker date="1526326426230" expanded="false" signature="944:955" ph=" { " />
+            <marker date="1526326426230" expanded="false" signature="990:996" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationMarkerCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/LocationSceneCustom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="148" column="51" lean-forward="false" selection-start-line="148" selection-start-column="51" selection-end-line="148" selection-end-column="51" />
+        <state relative-caret-position="409">
+          <caret line="153" column="51" lean-forward="false" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/ar/sceneform/samples/hellosceneform/HelloSceneformActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="48" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="90" column="62" lean-forward="false" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="62" />
           <folding>
-            <element signature="e#3631#3699#0" expanded="true" />
+            <element signature="e#4477#4545#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sampledata/starbucks.sfa">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

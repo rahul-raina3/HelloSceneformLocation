@@ -54,34 +54,54 @@ public class HelloSceneformActivity extends AppCompatActivity {
     private ModelRenderable starbucksRenderable;
     private LocationSceneCustom locationScene;
     private Session arSession;
+    private boolean placedAnchor;
     private Handler mHandler = new Handler();
 
-    Runnable locationUpdates = new Runnable() {
+    Runnable anchorUpdates = new Runnable() {
         public void run() {
             try {
-                Frame frame = arFragment.getArSceneView().getSession().update();
-                Log.d(TAG, "ARSession [FRAME]: " + frame);
-
-                if (frame.getUpdatedTrackables(Trackable.class).size() == 0) {
-                    locationScene = new LocationSceneCustom(HelloSceneformActivity.this, HelloSceneformActivity.this, arFragment);
-
-                    // Annotation at Buckingham Palace
-                    locationScene.mLocationMarkers.add(
-                            new LocationMarker(
-                                    33.780201,
-                                    -84.388684,
-                                    new AnnotationRenderer("Buckingham Palace")));
-
-                    // Calling draw which calls refreshAnchorsIfRequired on the frame
-                    locationScene.draw(frame);
-                    Log.d(TAG, "ARSession INITIALIZED: " + frame);
-                    Log.d(TAG, "ARSession Anchors: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
-//                    HelloSceneformActivity.this.mHandler.postDelayed(HelloSceneformActivity.this.locationUpdates, 1000L);
-
-                }
+                locationScene.refreshAnchorsIfRequired(arFragment.getArSceneView().getSession().update());
             } catch (CameraNotAvailableException e) {
                 e.printStackTrace();
             }
+            HelloSceneformActivity.this.mHandler.postDelayed(HelloSceneformActivity.this.locationUpdates, 8000L);
+
+        }
+    };
+
+    Runnable locationUpdates = new Runnable() {
+        public void run() {
+            if (!placedAnchor) {
+                try {
+                    Frame frame = arFragment.getArSceneView().getSession().update();
+                    Log.d(TAG, "ARSession [FRAME]: " + frame);
+
+                    if (frame.getUpdatedTrackables(Trackable.class).size() > 0) {
+                        placedAnchor = true;
+                        locationScene = new LocationSceneCustom(HelloSceneformActivity.this, HelloSceneformActivity.this, arFragment, starbucksRenderable);
+
+                        // Annotation at Buckingham Palace
+                        locationScene.mLocationMarkers.add(
+                                new LocationMarkerCustom(
+                                        -84.396266,
+                                        33.777812,
+                                        new AnnotationRenderer("Buckingham Palace")));
+
+                        // Calling draw which calls refreshAnchorsIfRequired on the frame
+                        locationScene.refreshAnchorsIfRequired(frame);
+                        Log.d(TAG, "ARSession INITIALIZED: " + frame);
+                        Log.d(TAG, "ARSession Anchors: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
+                        HelloSceneformActivity.this.mHandler.removeCallbacks(this);
+                        anchorUpdates.run();
+                    } else {
+                        HelloSceneformActivity.this.mHandler.postDelayed(HelloSceneformActivity.this.locationUpdates, 1000L);
+
+                    }
+                } catch (CameraNotAvailableException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
     };
 
@@ -102,7 +122,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
         // a CompletableFuture. Call thenAccept(), handle(), or check isDone() before calling get().
         // Starbucks Renderable
         ModelRenderable.builder()
-                .setSource(this, R.raw.starbucks)
+                .setSource(this, R.raw.andy)
                 .build()
                 .thenAccept(renderable -> starbucksRenderable = renderable)
                 .exceptionally(
@@ -132,7 +152,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
                     Anchor anchor = hitResult.createAnchor();
                     AnchorNode anchorNode = new AnchorNode(anchor);
                     anchorNode.setParent(arFragment.getArSceneView().getScene());
-                    Log.d(TAG, "ARSession Anchors: " + arSession.getAllAnchors().size());
+                    Log.d(TAG, "ARSession Anchors: " + arFragment.getArSceneView().getSession().getAllAnchors().size());
 
 
                     // Create the transformable andy and add it to the anchor.
@@ -150,6 +170,8 @@ public class HelloSceneformActivity extends AppCompatActivity {
         } catch (CameraNotAvailableException e) {
             e.printStackTrace();
         }
+
+        placedAnchor = false;
 
         this.locationUpdates.run();
 //      Log.d(TAG, "ARSession [FRAME]: " + frame);
